@@ -3,7 +3,7 @@
 
 ## Terminal keyboard shortcuts 
 
-Ctrl + Alt + T | Alt+F2	Launch Terminal
+Ctrl + Alt + T | Alt+F2 | Ctrl+Alt+F1	Launch Terminal
 Shift + Ctrl + T	New tab
 Shift + Ctrl + W	Close tab
 Shift + Ctrl + N	New window
