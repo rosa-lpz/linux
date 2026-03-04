@@ -1,7 +1,16 @@
 # Linux
 Repository for linux knowledge base
 
-## Commands
+
+
+## [Linux Mint Debian Edition](lmde/)
+
+* [Keyboard shortcuts](lmde/keyboard-shorcuts/)
+* [Errors](lmde/errors)
+
+
+
+## [Commands](commands/)
 
 ### Install packages
 
