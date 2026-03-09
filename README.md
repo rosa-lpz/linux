@@ -46,17 +46,30 @@ Listing of all groups in the system
 ```bash
 cat /etc/group
 ```
-```bash
 
-
-```
 
 ## Add a group
 ```bash
-ls -ls
+sudo groupadd <group_name> 
+```
+To see the group
+
+```bash
+cat /etc/group
 ```
 
+## Deleted a group
+```bash
+sudo groupdel <group_name> 
+```
+
+## Assign an user to that group
+```bash
+sudo usermod -a -G
+sudo usermod -aG <group_name> <user_name>
+```
 
 # References
 * Learn Linux TV
-  * Linux Crash Course - Managing Groups:https://youtu.be/GnlgAD8-GhE 
+  * Linux Crash Course - Managing Groups:https://youtu.be/GnlgAD8-GhE
+  * Linux Crash Course - Understanding File & Directory Permissions: https://youtu.be/4e669hSjaX8
