@@ -21,3 +21,7 @@ sudo dpkg -i DEB_PACKAGE
 
 # Users
 * https://www.geeksforgeeks.org/linux-unix/users-in-linux-system-administration/
+
+
+# Groups
+https://wiki.debian.org/SystemGroups/
