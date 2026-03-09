@@ -18,3 +18,6 @@ Repository for linux knowledge base
 ```bash
 sudo dpkg -i DEB_PACKAGE
 ```
+
+# Users
+* https://www.geeksforgeeks.org/linux-unix/users-in-linux-system-administration/
