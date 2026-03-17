@@ -190,6 +190,20 @@ Output
 drwxrwxrwx 23 user users <date>
 ```
 
+
+
+### **Assign group ownership of the directory**
+
+```bash
+sudo chown -R :sharedgroup /srv/shared
+```
+
+**chown** - changes ownership of a file. Can be used recursively. Usage may be restricted to root, or even disabled, for security reasons. usage: **chown** userid files or: **chown** -R userid files
+ Use chown -R user:group directory/ for recursive ownership changes.chmod +rwx filename – Adds read, write, and execute permissions.
+
+- [https://wiki.debian.org/PrincipalCommands?highlight=%28chown%29](https://wiki.debian.org/PrincipalCommands?highlight=(chown))
+- https://www.geeksforgeeks.org/linux-unix/chown-command-in-linux-with-examples/
+
 ### Give access to all users to a drive
 
 ```bash
@@ -202,7 +216,11 @@ stat '/media/drive'
 ```
 
 
+
+
+
 # References
+
 * https://wiki.debian.org/UsersAndGroups
 * https://wiki.debian.org/Permissions
 * Learn Linux TV
