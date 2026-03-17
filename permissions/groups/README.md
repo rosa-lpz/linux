@@ -33,6 +33,7 @@ cat /etc/group
 
 ```bash
 sudo groupadd <group_name> 
+sudo addgroup <group_name> 
 ```
 
 To see the group
@@ -54,6 +55,10 @@ sudo usermod -a -G
 sudo usermod -aG <group_name> <user_name>
 ```
 
+## Check user group
+```bash
+groups <user_name>
+```
 # References
 
 * Learn Linux TV
