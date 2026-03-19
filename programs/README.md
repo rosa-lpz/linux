@@ -1,6 +1,8 @@
 # Content
 * [Programming](#programming)
+  * [GitHub Desktop](#github-desktop)  
 * [Organization / Productivity](#organization-productivity)
+  * [Logseq](#logseq)
 
 
 # Organization Productivity
