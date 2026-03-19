@@ -1,6 +1,24 @@
+# Content
+* [Programming](#programming)
+* [Organization / Productivity](#organization-productivity)
+
+
+# Organization Productivity
+## Logseq
+* GitHub Repository: https://github.com/logseq/logseq
+
+```bash
+# Download and run the installer
+curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash
+
+# Or install a specific version
+curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash -s -- 0.10.14
+
+# For user-specific installation (no root required)
+curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash -s -- --user
+```
+
 # Programming
-
-
 
 ## GitHub Desktop
 
@@ -31,14 +49,14 @@ releases from this repository.
 
 #### [@shiftkey](https://github.com/shiftkey) package feed
 
-```sh
+```bash
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
 ```
 
 #### [@mwt](https://github.com/mwt) package feed
 
-```sh
+```bash
 wget -qO - https://mirror.mwt.me/shiftkey-desktop/gpgkey | gpg --dearmor | sudo tee /usr/share/keyrings/mwt-desktop.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/mwt-desktop.gpg] https://mirror.mwt.me/shiftkey-desktop/deb/ any main" > /etc/apt/sources.list.d/mwt-desktop.list'
 ```
@@ -47,6 +65,6 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/mwt-desktop.gpg]
 
 Once you have a feed configured, run this command to install the application:
 
-```sh
+```bash
 sudo apt update && sudo apt install github-desktop
 ```
