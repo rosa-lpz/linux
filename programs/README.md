@@ -3,7 +3,8 @@
   * [Logseq](#logseq)
 * [Programming](#programming)
   * [GitHub Desktop](#github-desktop)
-  * [PosgreSQL](#posgresql)
+  * [PostgreSQL](#postgresql)
+  * [PostgreSQL pgAdmin](#postgresql-pgadmin)
     
 # Organization and Productivity
 ## Logseq
@@ -70,7 +71,7 @@ Once you have a feed configured, run this command to install the application:
 ```bash
 sudo apt update && sudo apt install github-desktop
 ```
-## PosgreSQL
+## PostgreSQL
 * https://www.postgresql.org/download/linux/debian/
 
 PostgreSQL is available in all Debian versions by default. However, Debian "snapshots" a specific version of PostgreSQL that is then supported throughout the lifetime of that Debian version. The PostgreSQL project maintains an Apt repository with all supported of PostgreSQL available.
@@ -123,3 +124,35 @@ Install PostgreSQL: (replace "18" by the version you want)
 ```bash
 sudo apt install postgresql-18
 ```
+
+## PostgreSQL pgAdmin
+* https://www.pgadmin.org/download/pgadmin-4-apt/
+* 
+```bash
+# Setup the repository
+#
+
+# Install the public key for the repository (if not done previously):
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+
+# Create the repository configuration file:
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+
+#
+# Install pgAdmin
+#
+
+# Install for both desktop and web modes:
+sudo apt install pgadmin4
+
+# Install for desktop mode only:
+sudo apt install pgadmin4-desktop
+
+# Install for web mode only: 
+sudo apt install pgadmin4-web 
+
+# Configure the webserver, if you installed pgadmin4-web:
+sudo /usr/pgadmin4/bin/setup-web.sh
+```
+### References
+* How to Install Postgres and Pgadmin on Ubuntu 24.04 LTS Linux:https://youtu.be/cD32EHVWRXY
