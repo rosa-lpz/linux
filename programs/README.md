@@ -3,7 +3,7 @@
   * [Logseq](#logseq)
 * [Programming](#programming)
   * [GitHub Desktop](#github-desktop)
-  * [PosgreSQL](#prosgresql)
+  * [PosgreSQL](#posgresql)
     
 # Organization and Productivity
 ## Logseq
