@@ -73,6 +73,15 @@ sudo apt update && sudo apt install github-desktop
 ## PosgreSQL
 * https://www.postgresql.org/download/linux/debian/
 
+PostgreSQL is available in all Debian versions by default. However, Debian "snapshots" a specific version of PostgreSQL that is then supported throughout the lifetime of that Debian version. The PostgreSQL project maintains an Apt repository with all supported of PostgreSQL available.
+ 
+### Included in Distribution
+
+Debian includes PostgreSQL by default. To install PostgreSQL on Debian, use the apt (or other apt-driving) command:
+```bash
+apt install postgresql
+```
+### PostgreSQL Apt Repository
 
 If the version included in your version of Debian is not the one you want, you can use the PostgreSQL Apt Repository. This repository will integrate with your normal systems and patch management, and provide automatic updates for all supported versions of PostgreSQL throughout the support lifetime of PostgreSQL.
 
