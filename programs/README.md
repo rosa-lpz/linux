@@ -1,11 +1,11 @@
 # Content
-* [Programming](#programming)
-  * [GitHub Desktop](#github-desktop)  
-* [Organization / Productivity](#organization-productivity)
+* [Organization and Productivity](#organization-and-productivity)
   * [Logseq](#logseq)
-
-
-# Organization Productivity
+* [Programming](#programming)
+  * [GitHub Desktop](#github-desktop)
+  * [PosgreSQL](#prosgresql)
+    
+# Organization and Productivity
 ## Logseq
 * GitHub Repository: https://github.com/logseq/logseq
 
@@ -69,4 +69,48 @@ Once you have a feed configured, run this command to install the application:
 
 ```bash
 sudo apt update && sudo apt install github-desktop
+```
+## PosgreSQL
+* https://www.postgresql.org/download/linux/debian/
+
+
+If the version included in your version of Debian is not the one you want, you can use the PostgreSQL Apt Repository. This repository will integrate with your normal systems and patch management, and provide automatic updates for all supported versions of PostgreSQL throughout the support lifetime of PostgreSQL.
+
+The PostgreSQL Apt repository supports the current versions of Debian:
+
+    trixie (13.x)
+    bookworm (12.x)
+    bullseye (11.x)
+    forky (testing)
+    sid (unstable)
+
+on the following architectures:
+
+    amd64
+    arm64
+    ppc64el
+
+Automated repository configuration: 
+```bash
+sudo apt install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+```
+To manually configure the Apt repository, follow these steps: 
+```bash
+# Import the repository signing key:
+sudo apt install curl ca-certificates
+sudo install -d /usr/share/postgresql-common/pgdg
+sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
+
+# Create the repository configuration file:
+. /etc/os-release
+sudo sh -c "echo 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $VERSION_CODENAME-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+
+# Update the package lists:
+sudo apt update
+```
+
+Install PostgreSQL: (replace "18" by the version you want) 
+```bash
+sudo apt install postgresql-18
 ```
