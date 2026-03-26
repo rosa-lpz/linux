@@ -154,5 +154,22 @@ sudo apt install pgadmin4-web
 # Configure the webserver, if you installed pgadmin4-web:
 sudo /usr/pgadmin4/bin/setup-web.sh
 ```
+
+### Change password
+Execute
+```bash
+sudo -u postgres psql
+```
+output
+```bash
+postgres=#
+```
+Then type:
+```bash
+postgres=# alter user postgres with password 'add_password'
+ALTER ROLE
+postgres=# quit
+```
+
 ### References
 * How to Install Postgres and Pgadmin on Ubuntu 24.04 LTS Linux:https://youtu.be/cD32EHVWRXY
