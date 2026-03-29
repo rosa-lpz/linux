@@ -5,7 +5,9 @@
   * [GitHub Desktop](#github-desktop)
   * [PostgreSQL](#postgresql)
   * [PostgreSQL pgAdmin](#postgresql-pgadmin)
-    
+* [Security]
+
+  
 # Organization and Productivity
 ## Logseq
 * GitHub Repository: https://github.com/logseq/logseq
@@ -173,3 +175,19 @@ postgres=# quit
 
 ### References
 * How to Install Postgres and Pgadmin on Ubuntu 24.04 LTS Linux:https://youtu.be/cD32EHVWRXY
+
+# Security
+## UFW
+Install
+```bash
+sudo apt install ufw
+```
+Check status of ufw
+```bash
+systemctl status ufw
+```
+
+
+
+### References
+* Linux Firewall Tutorial | How to Configure Firewall Rules with UFW
