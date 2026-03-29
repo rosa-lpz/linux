@@ -6,7 +6,7 @@
   * [PostgreSQL](#postgresql)
   * [PostgreSQL pgAdmin](#postgresql-pgadmin)
 * [Security](#security)
-  * [Firewall - UFW](#firewall-ufw)
+  * [Uncomplicated Firewall (ufw)](#uncomplicated-firewall-ufw)
 
   
 # Organization and Productivity
@@ -178,9 +178,11 @@ postgres=# quit
 * How to Install Postgres and Pgadmin on Ubuntu 24.04 LTS Linux:https://youtu.be/cD32EHVWRXY
 
 # Security
-## Firewall UFW
+
+## Uncomplicated Firewall (ufw)
+
 #### Install
-**Install**
+
 ```bash
 sudo apt install ufw
 ```
@@ -188,8 +190,9 @@ sudo apt install ufw
 ```bash
 systemctl status ufw
 ```
-#### Configure UFW firewall
-**Default outgoing policy **
+#### Configure ufw
+**Default outgoing policy**
+
 We change the the default outgoing policy to 'Allow'. If the server/pc is trying to reach something on the internet, basically it's outgoing from the server/pc to the interenet, then you'll want to be able to reach whatever it's trying to reach.
 ```bash
 ufw default allow outgoing
@@ -201,3 +204,4 @@ ufw default deny incoming
 
 ### References
 * Akami Developer - Linux Firewall Tutorial | How to Configure Firewall Rules with UFW: https://youtu.be/XtRXm4FFK7Q
+* Debian - Uncomplicated Firewall (ufw): https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29
