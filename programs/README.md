@@ -181,7 +181,7 @@ postgres=# quit
 
 ## Uncomplicated Firewall (ufw)
 
-#### Install
+### Install
 
 ```bash
 sudo apt install ufw
@@ -190,7 +190,7 @@ sudo apt install ufw
 ```bash
 systemctl status ufw
 ```
-#### Configure ufw
+### Configure ufw
 **Default outgoing policy**
 
 We change the the default outgoing policy to 'Allow'. If the server/pc is trying to reach something on the internet, basically it's outgoing from the server/pc to the interenet, then you'll want to be able to reach whatever it's trying to reach.
