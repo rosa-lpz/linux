@@ -31,4 +31,7 @@ Compare with checksum: [SHA512SUMS](https://cdimage.debian.org/debian-cd/current
 # Drivers
 
 ## NVIDIA
-The Easiest Way to Install Nvidia Drivers on Debian in 2024 No More Headaches!: https://youtu.be/aYhWcJo1Zf8
+
+### References
+* The Easiest Way to Install Nvidia Drivers on Debian in 2024 No More Headaches!: https://youtu.be/aYhWcJo1Zf8
+* HOWTO INSTALACIÓN paso a paso NVIDIA repos Drivers en Debian 13 Trixie (lo que nadie te cuenta):https://youtu.be/v_Ly1s-Qgio
