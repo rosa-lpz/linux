@@ -1,6 +1,9 @@
 # Content
 * [Browsers](#browsers)
   * [Brave](#brave)
+ 
+* [[Messaging](#messagin)
+  * [Telegram](#telegram)
 * [Organization and Productivity](#organization-and-productivity)
   * [Logseq](#logseq)
 * [Programming](#programming)
@@ -25,7 +28,10 @@ curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/instal
 curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash -s -- --user
 
 ```
- 
+# Messaging
+## [Telegram Desktop](https://desktop.telegram.org/)
+ * https://desktop.telegram.org/
+
 # Organization and Productivity
 ## Logseq
 * GitHub Repository: https://github.com/logseq/logseq
