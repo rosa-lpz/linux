@@ -27,3 +27,8 @@ Compare with checksum: [SHA512SUMS](https://cdimage.debian.org/debian-cd/current
 * https://www.debian.org/download
 
 * https://www.thelinuxvault.net/blog/how-to-verify-an-authenticity-of-downloaded-debian-iso-images/#step-2-verify-integrity-with-sha256-checksum
+
+# Drivers
+
+## NVIDIA
+The Easiest Way to Install Nvidia Drivers on Debian in 2024 No More Headaches!: https://youtu.be/aYhWcJo1Zf8
