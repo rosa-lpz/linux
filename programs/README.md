@@ -2,7 +2,7 @@
 * [Browsers](#browsers)
   * [Brave](#brave)
  
-* [[Messaging](#messagin)
+* [Messaging](#messagin)
   * [Telegram](#telegram)
 * [Organization and Productivity](#organization-and-productivity)
   * [Logseq](#logseq)
