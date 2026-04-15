@@ -6,8 +6,9 @@
   * [Telegram](#telegram)
 * [Organization and Productivity](#organization-and-productivity)
   * [Logseq](#logseq)
-* [Text](#text)
+* [Text/Diagrams](#text)
   * [Typora](#typora)
+  * [Draw io](#draw-io)
 * [Programming](#programming)
   * [GitHub Desktop](#github-desktop)
   * [PostgreSQL](#postgresql)
@@ -49,7 +50,8 @@ curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/instal
 curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash -s -- --user
 ```
 # Text
-## Typora
+## [Typora](https://typora.io/)
+* Releases: https://typora.io/releases/all
 ```bash
 # add Typora's key
 sudo mkdir -p /etc/apt/keyrings
@@ -60,6 +62,11 @@ sudo apt update
 # install typora
 sudo apt install typora
 ```
+## Draw io
+
+* Repository: https://github.com/jgraph/drawio-desktop/
+* Releases: https://github.com/jgraph/drawio-desktop/releases
+* Deb file: https://github.com/jgraph/drawio-desktop/releases/download/v29.6.6/drawio-amd64-29.6.6.deb
 
 # Programming
 
