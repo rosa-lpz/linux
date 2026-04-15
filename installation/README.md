@@ -31,6 +31,56 @@ Compare with checksum: [SHA512SUMS](https://cdimage.debian.org/debian-cd/current
 # Drivers
 
 ## NVIDIA
+### Prerequisites
+apt components
+
+Make sure that components contrib, non-free and non-free-firmware are enabled at least for the base (bookworm, trxie, fortky etc) and -security suites in your /etc/apt/sources.list file. For example for Trixie you should have at least entries similar to the two below: (the order of components does not matter)
+```bash
+deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+deb http://security.debian.org/debian-security/ trixie-security contrib non-free main non-free-firmware
+```
+...and often also for -updates:
+
+```bash
+deb http://deb.debian.org/debian/ trixie-updates non-free-firmware non-free contrib main
+```
+
+If any entry in /etc/apt/sources.list related to the official Debian suites (like trixie, trixie-security in case of Trxie and possibly also trixie-updates and trixie-backports if you use them) misses any of the mentioned components, append them accordingly.
+
+If you have corresponding deb-src entries configured, it is recommended to add the components to them as well.
+
+Afterwards run
+```bash
+# apt update
+```
+This will fetch information about the new components from remote Debian repositories.
+
+You can see SourcesList for more information on configuring apt sources.
+
+
+### Debian 13 "Trixie"
+
+550.xx.yy series
+This version series supports Maxwell, Pascal, Volta, Turing, Ampere and Ada/Hopper GPUs, it does not support Blackwell (the full list of supported devices). For older devices, use nouveau, which should be already installed and in use. For Blackwell consider other packaging methods.
+
+Note: this version will not work with kernels 6.16 or newer like the current one from trixie-backports: use the the corresponding version from trixie-backports instead.
+
+Choose a flavor to install:
+
+To install the proprietary flavor, packages nvidia-kernel-dkms and nvidia-driver should be installed:
+```bash
+# apt install nvidia-kernel-dkms nvidia-driver
+```
+To instead install the open flavor, packages nvidia-open-kernel-dkms and nvidia-driver should be installed:
+(reminder: Maxwell, Pascal and Volta GPUs are not supported by this flavor)
+
+```bash
+# apt install nvidia-open-kernel-dkms nvidia-driver
+```
+DKMS will build the modules for your system from either nvidia-kernel-dkms or nvidia-open-kernel-dkms package.
+
+Proceed to post-installation steps.
+
 
 ### References
 * The Easiest Way to Install Nvidia Drivers on Debian in 2024 No More Headaches!: https://youtu.be/aYhWcJo1Zf8
