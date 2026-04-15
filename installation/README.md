@@ -31,7 +31,10 @@ Compare with checksum: [SHA512SUMS](https://cdimage.debian.org/debian-cd/current
 # Drivers
 
 ## NVIDIA
+* https://wiki.debian.org/NvidiaGraphicsDrivers
+* https://us.download.nvidia.com/XFree86/Linux-x86_64/550.163.01/README/supportedchips.html
 ### Prerequisites
+* https://wiki.debian.org/NvidiaGraphicsDrivers#Prerequisites
 #### apt components
 
 Make sure that components contrib, non-free and non-free-firmware are enabled at least for the base (bookworm, trxie, fortky etc) and -security suites in your /etc/apt/sources.list file. For example for Trixie you should have at least entries similar to the two below: (the order of components does not matter)
