@@ -6,6 +6,8 @@
   * [Telegram](#telegram)
 * [Organization and Productivity](#organization-and-productivity)
   * [Logseq](#logseq)
+* [Text](#text)
+  * [Typora](#typora)
 * [Programming](#programming)
   * [GitHub Desktop](#github-desktop)
   * [PostgreSQL](#postgresql)
@@ -45,6 +47,18 @@ curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/instal
 
 # For user-specific installation (no root required)
 curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash -s -- --user
+```
+# Text
+## Typora
+```bash
+# add Typora's key
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://downloads.typora.io/typora.gpg | sudo tee /etc/apt/keyrings/typora.gpg > /dev/null
+# add Typora's repository securely
+echo "deb [signed-by=/etc/apt/keyrings/typora.gpg] https://downloads.typora.io/linux ./" | sudo tee /etc/apt/sources.list.d/typora.list
+sudo apt update
+# install typora
+sudo apt install typora
 ```
 
 # Programming
