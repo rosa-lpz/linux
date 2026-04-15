@@ -70,7 +70,7 @@ If you use some special features kernel like -rt or -cloud, you may need to manu
 ```
 ToDo: verify if apt cannot figure that out via linux-headers-generic.
 
-SecureBoot
+### SecureBoot
 If you have [SecureBoot](https://wiki.debian.org/SecureBoot) enabled, you need to enroll your machine owner's key (MOK) to use DKMS modules. Detailed instructions are available [here](https://wiki.debian.org/SecureBoot#dkms). It's recommended to do this before installing nvidia-driver so that you do not have to rebuild the kernel modules.
 
 ### Debian 13 "Trixie"
