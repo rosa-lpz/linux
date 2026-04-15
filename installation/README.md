@@ -32,7 +32,7 @@ Compare with checksum: [SHA512SUMS](https://cdimage.debian.org/debian-cd/current
 
 ## NVIDIA
 ### Prerequisites
-apt components
+#### apt components
 
 Make sure that components contrib, non-free and non-free-firmware are enabled at least for the base (bookworm, trxie, fortky etc) and -security suites in your /etc/apt/sources.list file. For example for Trixie you should have at least entries similar to the two below: (the order of components does not matter)
 ```bash
@@ -57,6 +57,18 @@ This will fetch information about the new components from remote Debian reposito
 
 You can see SourcesList for more information on configuring apt sources.
 
+#### Kernel headers
+In standard cases you can just ask apt to install linux-headers-generic virtual package and it will pick the right blend for you:
+```bash
+# apt install linux-headers-generic
+```
+This will install for example linux-headers-amd64 if you have an AMD/Intel CPU or linux-headers-arm64 if you have an ARM CPU.
+
+If you use some special features kernel like -rt or -cloud, you may need to manually point the corresponding -rt/-cloud headers instead of the standard ones mentioned above:
+```bash
+# apt install linux-headers-rt-amd64
+```
+ToDo: verify if apt cannot figure that out via linux-headers-generic.
 
 ### Debian 13 "Trixie"
 
