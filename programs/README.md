@@ -15,7 +15,8 @@
   * [PostgreSQL pgAdmin](#postgresql-pgadmin)
 * [Security](#security)
   * [Uncomplicated Firewall (ufw)](#uncomplicated-firewall-ufw)
-
+* [Finance](#finance)
+   * [Interactive Brokers](#interactive-brokers)
 # Browsers
 
 ## [Brave](https://brave.com/linux)
@@ -249,3 +250,11 @@ ufw default deny incoming
 ### References
 * Akami Developer - Linux Firewall Tutorial | How to Configure Firewall Rules with UFW: https://youtu.be/XtRXm4FFK7Q
 * Debian - Uncomplicated Firewall (ufw): https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29
+
+# Finance
+ ## [Interactive Brokers](https://www.interactivebrokers.com/en/trading/ibkr-desktop-download.php)
+ * Installation: https://www.interactivebrokers.ca/en/general/tws-offline-latest-install-inst-linux-64.php
+
+```bash
+ ./ntws-latest-standalone-linux-x64.sh
+```
