@@ -160,7 +160,9 @@ Proceed to post-installation steps.
 
 
 ### References
-* Install NVIDIA Drivers the right way on Debian 13 Trixie: https://youtu.be/STudWT-qpqA
-* The Easiest Way to Install Nvidia Drivers on Debian in 2024 No More Headaches!: https://youtu.be/aYhWcJo1Zf8
-* HOWTO INSTALACIÓN paso a paso NVIDIA repos Drivers en Debian 13 Trixie (lo que nadie te cuenta):https://youtu.be/v_Ly1s-Qgio
-* HowTo Install Nvidia-Open Drivers On Debian 13 Trixie + Secure Boot: https://youtu.be/FaDENzwkzys
+- HowTo Install Nvidia-Open Drivers On Debian 13 Trixie + Secure Boot: https://youtu.be/FaDENzwkzys
+- Install NVIDIA Drivers the right way on Debian 13 Trixie: https://youtu.be/STudWT-qpqA
+- The Easiest Way to Install Nvidia Drivers on Debian in 2024 No More Headaches!: https://youtu.be/aYhWcJo1Zf8
+- HOWTO INSTALACIÓN paso a paso NVIDIA repos Drivers en Debian 13 Trixie (lo que nadie te cuenta): https://youtu.be/v_Ly1s-Qgio
+- Installing Nvidia Drivers on Debian 13 Trixie. My recipe...: https://youtu.be/xLjgLrPwLYc
+- Install NVIDIA Drivers on Debian 13 - [595.45.04 BETA / 590.48.01 / 580.126.18] [Secure Boot]: https://youtu.be/iDJCboZrvWY
