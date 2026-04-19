@@ -34,7 +34,7 @@ Compare with checksum: [SHA512SUMS](https://cdimage.debian.org/debian-cd/current
 * https://wiki.debian.org/NvidiaGraphicsDrivers
 * https://us.download.nvidia.com/XFree86/Linux-x86_64/550.163.01/README/supportedchips.html
 
-## NVDIA GPU identification
+### NVDIA GPU identification
 **With inxi -Gx**
 ```bash
 inxi -Gx
@@ -55,6 +55,12 @@ lspci | grep -iE "3d|display|vga" | grep -i nvidia
 #### apt components
 
 Make sure that components contrib, non-free and non-free-firmware are enabled at least for the base (bookworm, trxie, fortky etc) and -security suites in your /etc/apt/sources.list file. For example for Trixie you should have at least entries similar to the two below: (the order of components does not matter)
+
+*To open /etc/sudoers using Gnome Gedit*
+```bash
+sudo gedit etc/apt/sources.list
+```
+
 ```bash
 deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
 deb http://security.debian.org/debian-security/ trixie-security contrib non-free main non-free-firmware
@@ -78,10 +84,24 @@ This will fetch information about the new components from remote Debian reposito
 You can see SourcesList for more information on configuring apt sources.
 
 #### Kernel headers
+```bash
+inxi - S
+```
+Output
+```bash
+System:
+  Host: x Kernel: 32423+deb13+1-amd64 arch: x86_64 bits: 64
+```
+----
 In standard cases you can just ask apt to install linux-headers-generic virtual package and it will pick the right blend for you:
 ```bash
 # apt install linux-headers-generic
 ```
+or
+```bash
+apt install linux-headers-$(uname -r)
+```
+
 This will install for example linux-headers-amd64 if you have an AMD/Intel CPU or linux-headers-arm64 if you have an ARM CPU.
 
 If you use some special features kernel like -rt or -cloud, you may need to manually point the corresponding -rt/-cloud headers instead of the standard ones mentioned above:
@@ -93,6 +113,28 @@ ToDo: verify if apt cannot figure that out via linux-headers-generic.
 ### SecureBoot
 If you have [SecureBoot](https://wiki.debian.org/SecureBoot) enabled, you need to enroll your machine owner's key (MOK) to use DKMS modules. Detailed instructions are available [here](https://wiki.debian.org/SecureBoot#dkms). It's recommended to do this before installing nvidia-driver so that you do not have to rebuild the kernel modules.
 
+#### Install dkms
+
+```bash
+# apt install dkms
+```
+
+#### Install nvidia detect
+```bash
+# apt install nvidia-detect
+```
+#### Run
+```bash
+# nvidia-detect
+```
+output
+```bash
+Detected NVIDIA GPUs:
+```
+#### DKMS and Secure Boot
+* https://wiki.debian.org/SecureBoot#dkms
+* https://github.com/dkms-project/dkms#secure-boot
+  
 ### Debian 13 "Trixie"
 
 550.xx.yy series
