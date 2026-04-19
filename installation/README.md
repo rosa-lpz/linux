@@ -134,6 +134,43 @@ Detected NVIDIA GPUs:
 #### DKMS and Secure Boot
 * https://wiki.debian.org/SecureBoot#dkms
 * https://github.com/dkms-project/dkms#secure-boot
+
+```bash
+sudo dkms generate_mok
+```
+Output
+```bash
+Signing key: /var/lib/dkms/mok.key
+Public certificate (MOK): /var/lib/dkms/mok.pub
+Certificate or key are missing, generating self signed certificate for MOK...
+
+```
+Regardless of whether the DKMS MOK keys are automatically or manually generated, the public key needs to be manually enrolled by running the following commands:
+
+```bash
+sudo mokutil --import /var/lib/dkms/mok.pub # prompts for one-time password
+sudo mokutil --list-new # recheck your key will be prompted on next boot
+```
+Afterwards reboot your system and follow UEFI's onscreen instructions to confirm the key enrollment. If you are unsure how to proceed see [these step-by-step instructions in DKMS's README file](https://github.com/dkms-project/dkms#secure-boot).
+
+After reboot, you can inspect the MOK certificates with the following command:
+```bash
+# mokutil --list-enrolled | grep DKMS
+        Subject: CN=DKMS module signing key
+```
+To check the signature on a built DKMS module that is installed on a system:
+```bash
+# modinfo dkms_test | grep ^signer
+signer:         DKMS module signing key
+```
+The module can now be loaded without issues.
+
+
+Once you boot back to the OS, you can verify in the logs that the key is loaded:
+```bash
+sudo dmesg | grep cert
+```
+
   
 ### Debian 13 "Trixie"
 
