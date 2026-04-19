@@ -194,7 +194,7 @@ To instead install the open flavor, packages nvidia-open-kernel-dkms and nvidia-
 DKMS will build the modules for your system from either nvidia-kernel-dkms or nvidia-open-kernel-dkms package.
 
 Proceed to post-installation steps.
-
+* https://wiki.debian.org/NvidiaGraphicsDrivers#trixie-postinstall
 
 ### References
 - HowTo Install Nvidia-Open Drivers On Debian 13 Trixie + Secure Boot: https://youtu.be/FaDENzwkzys
