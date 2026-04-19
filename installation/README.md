@@ -193,10 +193,29 @@ To instead install the open flavor, packages nvidia-open-kernel-dkms and nvidia-
 ```
 DKMS will build the modules for your system from either nvidia-kernel-dkms or nvidia-open-kernel-dkms package.
 
-Proceed to post-installation steps.
+#### Proceed to post-installation steps.
 * https://wiki.debian.org/NvidiaGraphicsDrivers#trixie-postinstall
 
+```bash
+dkms status |grep nvidia
+```
+Output
+```bash
+nvidia-current/550.163.01, 6.12.74+deb13+1-amd64, x86_64: installed
+```
+This should result in 1 or more lines (1 per each installed kernel version) similar to the below: (the exact versions may differ)
+```bash
+nvidia/550.163.01, 6.12.57+deb13-amd64, x86_64: installed
+```
+Anything other than installed at the end means there was some problem: see Troubleshooting section in such case.
+In most cases a restart of the system is recommended to fully load the new driver.
+
 ### References
+- Documentation
+  - [Prerequisites](https://wiki.debian.org/NvidiaGraphicsDrivers#Prerequisites)
+  - [Trixie](https://wiki.debian.org/NvidiaGraphicsDrivers#Debian_13_.22Trixie.22)
+  - [Postinstallation](https://wiki.debian.org/NvidiaGraphicsDrivers#trixie-postinstall)
+  - [Troubleshooting](https://wiki.debian.org/NvidiaGraphicsDrivers#troubleshooting)
 - HowTo Install Nvidia-Open Drivers On Debian 13 Trixie + Secure Boot: https://youtu.be/FaDENzwkzys
 - Install NVIDIA Drivers the right way on Debian 13 Trixie: https://youtu.be/STudWT-qpqA
 - The Easiest Way to Install Nvidia Drivers on Debian in 2024 No More Headaches!: https://youtu.be/aYhWcJo1Zf8
