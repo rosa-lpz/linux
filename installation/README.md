@@ -33,6 +33,16 @@ Compare with checksum: [SHA512SUMS](https://cdimage.debian.org/debian-cd/current
 ## NVIDIA
 * https://wiki.debian.org/NvidiaGraphicsDrivers
 * https://us.download.nvidia.com/XFree86/Linux-x86_64/550.163.01/README/supportedchips.html
+
+### See NVIDIA card installed
+```bash
+inxi -Gx
+```
+Output
+```bash
+Graphics:
+  Device-1: NVIDIA GA106 [GeForce RTX 0000] vendor:
+```
 ### Prerequisites
 * https://wiki.debian.org/NvidiaGraphicsDrivers#Prerequisites
 #### apt components
