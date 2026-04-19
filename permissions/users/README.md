@@ -58,8 +58,20 @@ to a file in /etc/sudoers.d.
 ### Reference
 * https://wiki.debian.org/sudo/
 
+## Configuring sudo in Gedit
+To open /etc/sudoers using Gnome Gedit
+```bash
+sudo gedit /etc/sudoers
+```
+Add 'user' name under root
+```bash
+# User privilege specification
+root	ALL=(ALL:ALL) ALL
+<user> ALL=(ALL:ALL) ALL
 
-
+# Allow members of group sudo to execute any command
+%sudo	ALL=(ALL:ALL) ALL
+```
 ## Grant sudo access 
 ### Using Terminal
 ```bash
