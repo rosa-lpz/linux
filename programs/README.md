@@ -233,18 +233,79 @@ sudo apt install ufw
 ```
 **Check status of ufw**
 ```bash
+sudo ufw status
+```
+or
+```bash
 systemctl status ufw
 ```
+
+
+
+
 ### Configure ufw
 **Default outgoing policy**
 
-We change the the default outgoing policy to 'Allow'. If the server/pc is trying to reach something on the internet, basically it's outgoing from the server/pc to the interenet, then you'll want to be able to reach whatever it's trying to reach.
+We change the the default outgoing policy to 'Allow'. If the server/pc is trying to reach something on the internet, basically it's outgoing from the server/pc to the internet, then you'll want to be able to reach whatever it's trying to reach.
 ```bash
-ufw default allow outgoing
+sudo ufw default allow outgoing
 ```
 **Default policy for incoming**
 ```bash
-ufw default deny incoming
+sudo ufw default deny incoming
+```
+Next, it is recommended to verify that the firewall is enabled by typing:
+```bash
+sudo ufw status verbose
+```
+Note: With this command you will also be able to see all of the defaults and rules which you have applied.
+
+#### Rules
+**Allow ssh connections**
+By default ufw denies all of the incoming connections, which will make it a problem if you are using SSH. Therefore, you must create a rule which allows SSH connections, by typing:
+```bash
+sudo ufw allow ssh
+sudo ufw enable
+sudo ufw  status
+```
+**Allow http/tcp connections**
+```bash
+sudo ufw allow http/tcp
+```
+**Port Ranges**
+```bash
+sudo ufw allow 1000:2000/tcp
+```
+for udp
+```bash
+sudo ufw allow 1000:2000/udp
+```
+**IP Address**
+```bash
+sudo ufw allow from 111.222.333.444
+```
+
+**Status numbered**
+```bash
+sudo ufw status numbered
+```
+Output
+```bash
+     To                         Action      From
+     --                         ------      ----
+[ 1] 80/tcp                     ALLOW IN    Anywhere                  
+[ 2] Anywhere                   ALLOW IN    IP_number            
+[ 3] 80/tcp (v6)                ALLOW IN    Anywhere (v6) 
+```
+
+**Status numbered - delete**
+```bash
+sudo ufw deleted 3
+```
+
+### Graphical Interface
+```bash
+sudo apt-get install gufw
 ```
 
 ### References
