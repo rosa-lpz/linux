@@ -214,7 +214,7 @@ postgres=#
 ```
 Then type:
 ```bash
-postgres=# alter user postgres with password 'add_password'
+postgres=# alter user postgres with password 'add_password';
 ALTER ROLE
 postgres=# quit
 ```
