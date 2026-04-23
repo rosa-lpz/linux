@@ -316,6 +316,7 @@ sudo apt-get install gufw
 * Akami Developer - Linux Firewall Tutorial | How to Configure Firewall Rules with UFW: https://youtu.be/XtRXm4FFK7Q
 * Debian - Uncomplicated Firewall (ufw): https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29
 * https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
+* UFW | Uncomplicated Firewall: https://youtu.be/fcxirBuDnXY
 
 # Finance
  ## [Interactive Brokers](https://www.interactivebrokers.com/en/trading/ibkr-desktop-download.php)
