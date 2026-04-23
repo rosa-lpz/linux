@@ -284,7 +284,11 @@ sudo ufw allow 1000:2000/udp
 ```bash
 sudo ufw allow from 111.222.333.444
 ```
-
+**IP PostgreSQL**
+```bash
+sudo ufw allow from 203.0.113.103 to any port 5432
+sudo ufw allow from 127.0.0.1 to any port 5432
+```
 **Status numbered**
 ```bash
 sudo ufw status numbered
@@ -311,6 +315,7 @@ sudo apt-get install gufw
 ### References
 * Akami Developer - Linux Firewall Tutorial | How to Configure Firewall Rules with UFW: https://youtu.be/XtRXm4FFK7Q
 * Debian - Uncomplicated Firewall (ufw): https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29
+* https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
 
 # Finance
  ## [Interactive Brokers](https://www.interactivebrokers.com/en/trading/ibkr-desktop-download.php)
