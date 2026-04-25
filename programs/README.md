@@ -14,6 +14,7 @@
   * [PostgreSQL](#postgresql)
   * [PostgreSQL pgAdmin](#postgresql-pgadmin)
   * [Anaconda](#anaconda)
+  * [Java](#java)
 * [Security](#security)
   * [Uncomplicated Firewall (ufw)](#uncomplicated-firewall-ufw)
 * [Finance](#finance)
@@ -354,8 +355,17 @@ Remove all packages from the environment `myenv` but retain the environment::
   
    conda remove -n myenv --all --keep-env
 ```
+## Java
+* https://wiki.debian.org/Java
 
-
+To install the default JRE (Java Runtime Environment) on your system, run:
+```bash
+apt-get install default-jre
+```
+To install the default JDK (Java Development Kit) on your system, run:
+```bash
+apt-get install default-jdk
+```
 # Security
 
 ## Uncomplicated Firewall (ufw)
