@@ -50,6 +50,8 @@ curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/instal
 # For user-specific installation (no root required)
 curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash -s -- --user
 ```
+[Go Back](#content)
+
 # Text
 ## [Typora](https://typora.io/)
 * Releases: https://typora.io/releases/all
