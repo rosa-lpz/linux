@@ -19,6 +19,10 @@
   * [Uncomplicated Firewall (ufw)](#uncomplicated-firewall-ufw)
 * [Finance](#finance)
    * [Interactive Brokers](#interactive-brokers)
+ 
+* [Learning](#learning)
+	* [Anki](#anki)
+ * 
 # Browsers
 
 ## [Brave](https://brave.com/linux)
@@ -469,3 +473,9 @@ sudo apt-get install gufw
 ```bash
  ./ntws-latest-standalone-linux-x64.sh
 ```
+
+# Learning
+## Anki
+https://docs.ankiweb.net/platform/linux/installing.html
+
+
