@@ -16,13 +16,15 @@
   * [Anaconda](#anaconda)
   * [Java](#java)
 * [Security](#security)
+  * [Clamav](#clamav)
   * [Uncomplicated Firewall (ufw)](#uncomplicated-firewall-ufw)
 * [Finance](#finance)
    * [Interactive Brokers](#interactive-brokers)
- 
 * [Learning](#learning)
 	* [Anki](#anki)
- * 
+
+
+
 # Browsers
 
 ## [Brave](https://brave.com/linux)
@@ -371,6 +373,39 @@ To install the default JDK (Java Development Kit) on your system, run:
 apt-get install default-jdk
 ```
 # Security
+## Clamav
+### Installing ClamAV
+* https://docs.clamav.net/manual/Installing.html
+
+**DEB packages (for Debian, Ubuntu, etc.)**
+```bash
+sudo apt install ~/Downloads/clamav-1.4.0.libnux.x86_64.deb
+```
+You can verify that the package was installed using:
+```bash
+sudo apt info clamav
+```
+And uninstall the package with:
+```bash
+sudo apt remove clamav
+```
+
+**Signature Testing and Management**
+* https://docs.clamav.net/manual/Usage/SignatureManagement.html
+
+Before you can start the ClamAV scanning engine (using either clamd or clamscan), you must first have ClamAV Virus Database (.cvd) file(s) installed in the appropriate location on your system.
+
+The tool freshclam is used to download and update ClamAV’s official virus signature databases. While easy to use in its base configuration, freshclam does require a working freshclam.conf configuration file to run (the location of which can be passed in via command line if the default search location does not fit your needs).
+
+Once you have a valid configuration file, you can invoke FreshClam with the following command:
+```bash
+sudo freshclam
+```
+
+
+### ClamTk (Graphical Interface)
+**Debian**
+* Install ClamTk using "Discover" in Debian.
 
 ## Uncomplicated Firewall (ufw)
 
