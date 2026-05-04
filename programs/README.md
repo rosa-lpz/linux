@@ -22,6 +22,7 @@
    * [Interactive Brokers](#interactive-brokers)
 * [Learning](#learning)
 	* [Anki](#anki)
+* [Email](#email)
 
 
 
@@ -515,3 +516,6 @@ https://docs.ankiweb.net/platform/linux/installing.html
 
 ### References
 * 5 Ways to Use Anki for MATH-Related Classes (Physics, Economics, Calculus, etc.): https://youtu.be/xHoe9rvX7Ao
+
+# Email
+* https://proton.me/support/set-up-proton-mail-linux
