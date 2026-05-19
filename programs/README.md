@@ -9,6 +9,9 @@
 * [Text/Diagrams](#text)
   * [Typora](#typora)
   * [Draw io](#draw-io)
+  * [MasterPDF](#masterpdf)
+  * [PDF4QT](#pdf4qt)
+  * [Scribus](#scribus)
 * [Programming](#programming)
   * [GitHub Desktop](#github-desktop)
   * [PostgreSQL](#postgresql)
@@ -90,6 +93,27 @@ sudo apt install typora
 * Releases: https://github.com/jgraph/drawio-desktop/releases
 * Deb file: https://github.com/jgraph/drawio-desktop/releases/download/v29.6.6/drawio-amd64-29.6.6.deb
 
+## Scribus
+https://www.scribus.net/contribute/
+
+## MasterPDF Editor
+https://code-industry.net/free-pdf-editor/#get
+
+```bash
+curl -s http://repo.code-industry.net/deb/pubmpekey.asc | sudo tee /usr/share/keyrings/pubmpekey.asc
+echo -e "Types: deb
+Architectures: amd64
+URIs: http://repo.code-industry.net/deb
+Suites: stable
+Components: main
+Signed-By: /usr/share/keyrings/pubmpekey.asc" | sudo tee /etc/apt/sources.list.d/master-pdf-editor.sources
+sudo apt update
+sudo apt install master-pdf-editor-5
+```
+## PDF4QT
+* https://github.com/JakubMelka/PDF4QT
+
+  
 # Programming
 
 ## GitHub Desktop
