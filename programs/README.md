@@ -1,7 +1,6 @@
 # Content
 * [Browsers](#browsers)
   * [Brave](#brave)
- 
 * [Messaging](#messagin)
   * [Telegram](#telegram)
 * [Organization and Productivity](#organization-and-productivity)
@@ -27,6 +26,10 @@
 	* [Anki](#anki)
 * [Email](#email)
 * [Plugins](#plugins)
+	* [Flatpak](#flatpak)
+ 	* [Warehouse](#warehouse) 
+ * [Windows Applications)(#windows-applications)
+ 	* [Winboat](#winboat)
 
 
 
@@ -99,6 +102,9 @@ https://www.scribus.net/contribute/
 
 ## MasterPDF Editor
 https://code-industry.net/free-pdf-editor/#get
+
+## Eloquent
+https://flathub.org/en/apps/re.sonny.Eloquent
 
 ```bash
 curl -s http://repo.code-industry.net/deb/pubmpekey.asc | sudo tee /usr/share/keyrings/pubmpekey.asc
@@ -557,6 +563,7 @@ https://docs.ankiweb.net/platform/linux/installing.html
 
 # Plugins
 ## Flatpak
+* Install in debian: https://flathub.org/en/setup/Debian
 ### 1. Install Flatpak
 A flatpak package is available in Debian 10 (Buster) and newer. To install it, run the following as root:
 ```bash
@@ -578,3 +585,16 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 ```
 ### 4. Restart
 To complete setup, restart your system. Now all you have to do is install apps!
+
+## Warehouse
+* https://flathub.org/en/apps/io.github.flattool.Warehouse
+```bash
+flatpak install flathub io.github.flattool.Warehouse
+```
+Run
+```bash
+flatpak run io.github.flattool.Warehouse
+```
+# Windows Applications
+## Winboat
+https://winboat.app/
