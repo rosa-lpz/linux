@@ -28,7 +28,7 @@
 * [Plugins](#plugins)
 	* [Flatpak](#flatpak)
  	* [Warehouse](#warehouse) 
- * [Windows Applications)(#windows-applications)
+ * [Windows Applications](#windows-applications)
  	* [Winboat](#winboat)
 
 
@@ -103,9 +103,6 @@ https://www.scribus.net/contribute/
 ## MasterPDF Editor
 https://code-industry.net/free-pdf-editor/#get
 
-## Eloquent
-https://flathub.org/en/apps/re.sonny.Eloquent
-
 ```bash
 curl -s http://repo.code-industry.net/deb/pubmpekey.asc | sudo tee /usr/share/keyrings/pubmpekey.asc
 echo -e "Types: deb
@@ -117,6 +114,16 @@ Signed-By: /usr/share/keyrings/pubmpekey.asc" | sudo tee /etc/apt/sources.list.d
 sudo apt update
 sudo apt install master-pdf-editor-5
 ```
+## Eloquent
+https://flathub.org/en/apps/re.sonny.Eloquent
+```bash
+flatpak install flathub re.sonny.Eloquent
+```
+Run
+```bash
+flatpak run re.sonny.Eloquent
+```
+
 ## PDF4QT
 * https://github.com/JakubMelka/PDF4QT
 
