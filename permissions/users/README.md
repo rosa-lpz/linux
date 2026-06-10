@@ -3,7 +3,21 @@
 * https://www.geeksforgeeks.org/linux-unix/users-in-linux-system-administration/
 
 
+# Change password
 
+```bash
+su
+passwd username
+```
+
+Output
+
+```bash
+Enter new UNIX password:
+Retype new UNIX password:
+```
+
+## 
 
 
 # Sudo

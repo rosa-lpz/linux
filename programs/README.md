@@ -1,7 +1,6 @@
 # Content
 * [Browsers](#browsers)
   * [Brave](#brave)
- 
 * [Messaging](#messagin)
   * [Telegram](#telegram)
 * [Organization and Productivity](#organization-and-productivity)
@@ -9,14 +8,31 @@
 * [Text/Diagrams](#text)
   * [Typora](#typora)
   * [Draw io](#draw-io)
+  * [MasterPDF](#masterpdf)
+  * [PDF4QT](#pdf4qt)
+  * [Scribus](#scribus)
 * [Programming](#programming)
   * [GitHub Desktop](#github-desktop)
   * [PostgreSQL](#postgresql)
   * [PostgreSQL pgAdmin](#postgresql-pgadmin)
+  * [Anaconda](#anaconda)
+  * [Java](#java)
 * [Security](#security)
+  * [Clamav](#clamav)
   * [Uncomplicated Firewall (ufw)](#uncomplicated-firewall-ufw)
 * [Finance](#finance)
    * [Interactive Brokers](#interactive-brokers)
+* [Learning](#learning)
+	* [Anki](#anki)
+* [Email](#email)
+* [Plugins](#plugins)
+	* [Flatpak](#flatpak)
+ 	* [Warehouse](#warehouse) 
+ * [Windows Applications](#windows-applications)
+ 	* [Winboat](#winboat)
+
+
+
 # Browsers
 
 ## [Brave](https://brave.com/linux)
@@ -50,6 +66,18 @@ curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/instal
 # For user-specific installation (no root required)
 curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash -s -- --user
 ```
+### Error EPERM: operation not permitted 
+The Error: EPERM: operation not permitted in Logseq typically indicates a file permission conflict or a file locking issue where the application cannot write to or modify files in your vault.  This error manifests differently depending on the context:
+
+File Writing Errors: Occurs when Logseq cannot save changes to .md files or internal data files (e.g., graphs-txid.edn). This is frequently caused by OneDrive sync conflicts on Windows, where the cloud service locks the file during upload, or by the "Automatically change file permissions" setting in Logseq's Advanced options. 
+Plugin/Theme Installation Errors: Occurs when Logseq cannot rename or move files from the temporary download folder to the plugins directory. This is often due to antivirus software or Windows Explorer having a file handle open on the target directory, preventing the move operation. 
+Vault Access Errors: Occurs when Logseq cannot read the entire graph directory (e.g., scandir error), often due to the vault being stored in a protected system directory or having incorrect user ownership permissions. 
+
+**Common Solutions**
+* Disable Automatic Permission Changes: Go to Options > Advanced and uncheck "Automatically change file permissions".  This often resolves chmod related EPERM errors on Windows.
+
+[Go Back](#content)
+
 # Text
 ## [Typora](https://typora.io/)
 * Releases: https://typora.io/releases/all
@@ -69,6 +97,37 @@ sudo apt install typora
 * Releases: https://github.com/jgraph/drawio-desktop/releases
 * Deb file: https://github.com/jgraph/drawio-desktop/releases/download/v29.6.6/drawio-amd64-29.6.6.deb
 
+## Scribus
+https://www.scribus.net/contribute/
+
+## MasterPDF Editor
+https://code-industry.net/free-pdf-editor/#get
+
+```bash
+curl -s http://repo.code-industry.net/deb/pubmpekey.asc | sudo tee /usr/share/keyrings/pubmpekey.asc
+echo -e "Types: deb
+Architectures: amd64
+URIs: http://repo.code-industry.net/deb
+Suites: stable
+Components: main
+Signed-By: /usr/share/keyrings/pubmpekey.asc" | sudo tee /etc/apt/sources.list.d/master-pdf-editor.sources
+sudo apt update
+sudo apt install master-pdf-editor-5
+```
+## Eloquent
+https://flathub.org/en/apps/re.sonny.Eloquent
+```bash
+flatpak install flathub re.sonny.Eloquent
+```
+Run
+```bash
+flatpak run re.sonny.Eloquent
+```
+
+## PDF4QT
+* https://github.com/JakubMelka/PDF4QT
+
+  
 # Programming
 
 ## GitHub Desktop
@@ -214,7 +273,7 @@ postgres=#
 ```
 Then type:
 ```bash
-postgres=# alter user postgres with password 'add_password'
+postgres=# alter user postgres with password 'add_password';
 ALTER ROLE
 postgres=# quit
 ```
@@ -222,7 +281,180 @@ postgres=# quit
 ### References
 * How to Install Postgres and Pgadmin on Ubuntu 24.04 LTS Linux:https://youtu.be/cD32EHVWRXY
 
+## Anaconda
+
+### Installation
+
+* https://docs.anaconda.com/anaconda/install/
+* https://www.anaconda.com/docs/getting-started/anaconda/install/linux-install
+* Repo archive: https://repo.anaconda.com/archive/
+* Installation video: https://www.youtube.com/watch?v=sU2mXjOB-fA
+
+#### Download the installation file
+```bash
+wget https://repo.anaconda.com/archive/Anaconda3-2025.12-2-Linux-x86_64.sh
+```
+
+#### Check integrity of the file
+```bash
+shasum -a 256 ~/<INSTALLER-FILENAME>
+shasum -a 256 Anaconda3-2024.10-1-Linux-x86_64.sh
+
+```
+	* Compare it with https://repo.anaconda.com/archive/
+
+#### Normal Installation
+```bash
+bash ~/Anaconda3-2025.12-2-Linux-x86_64.sh
+```
+
+```bash
+bash /Downloads/Anaconda-latest-Linux-x86_64.sh
+```
+	
+#### Install in another directory
+```bash
+sudo bash Anaconda3-2024.10-1-Linux-x86_64.sh -f -b -p /Programs/anaconda3
+```
+
+#### Refresh terminal
+```bash
+source ~/.bashrc
+```
+
+#### List of packages installed with anaconda
+```bash
+conda list
+```
+
+
+### Anaconda commands
+
+```bash
+--Create--
+conda create -name ENV_NAME python=python_version
+conda create -n ENV_NAME python=python_version
+
+--ActivateEnvironments--
+conda activate
+
+--See-list-libraries
+conda list
+
+--Activate-Specific-Environment--
+conda activate <env_name>
+
+---List-all-the-environments--
+conda env list
+
+--Deactivate-environment--
+conda deactivate
+
+---Update---
+conda update -n base -c defaults conda
+
+--Delete-environment--
+conda remove --name ENV_NAME --all
+
+--Delete-environment with libraries--
+conda remove --n ENV_NAME --all
+```
+
+
+### Environments
+#### Create environments
+
+```bash
+conda create --name <my-env>
+```
+
+With an specific Python version
+```bash
+conda create -n myenv python=3.8
+```
+#### Delete environment
+```bash
+conda remove --name ENV_NAME --all
+```
+
+`ENV_NAME` denotes the name of the environment to be removed/deleted. Make sure you deactivate an environment before removing it by running the `conda deactivate` command.
+
+The `--all` flag removes all the packages installed in that environment.
+
+Here's a summary of the steps involved in deleting an environment in Conda:
+
+- Deactivate the environment using the `conda deactivate` command.
+- Delete the environment using the `conda remove --name ENV_NAME --all` command.
+
+**References**
+* https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/
+
+
+#### Examples
+```bash
+Examples:  
+  
+Remove the package 'scipy' from the currently-active environment::  
+  
+   conda remove scipy  
+  
+Remove a list of packages from an environment 'myenv'::  
+  
+   conda remove -n myenv scipy curl wheel  
+  
+Remove all packages from environment `myenv` and the environment itself::  
+  
+   conda remove -n myenv --all  
+  
+Remove all packages from the environment `myenv` but retain the environment::  
+  
+   conda remove -n myenv --all --keep-env
+```
+## Java
+* https://wiki.debian.org/Java
+
+To install the default JRE (Java Runtime Environment) on your system, run:
+```bash
+apt-get install default-jre
+```
+To install the default JDK (Java Development Kit) on your system, run:
+```bash
+apt-get install default-jdk
+```
 # Security
+## Clamav
+### Installing ClamAV
+* https://docs.clamav.net/manual/Installing.html
+
+**DEB packages (for Debian, Ubuntu, etc.)**
+```bash
+sudo apt install ~/Downloads/clamav-1.4.0.libnux.x86_64.deb
+```
+You can verify that the package was installed using:
+```bash
+sudo apt info clamav
+```
+And uninstall the package with:
+```bash
+sudo apt remove clamav
+```
+
+**Signature Testing and Management**
+* https://docs.clamav.net/manual/Usage/SignatureManagement.html
+
+Before you can start the ClamAV scanning engine (using either clamd or clamscan), you must first have ClamAV Virus Database (.cvd) file(s) installed in the appropriate location on your system.
+
+The tool freshclam is used to download and update ClamAV’s official virus signature databases. While easy to use in its base configuration, freshclam does require a working freshclam.conf configuration file to run (the location of which can be passed in via command line if the default search location does not fit your needs).
+
+Once you have a valid configuration file, you can invoke FreshClam with the following command:
+```bash
+sudo freshclam
+```
+
+
+### ClamTk (Graphical Interface)
+**Debian**
+* Install ClamTk using "Discover" in Debian.
 
 ## Uncomplicated Firewall (ufw)
 
@@ -316,6 +548,7 @@ sudo apt-get install gufw
 * Akami Developer - Linux Firewall Tutorial | How to Configure Firewall Rules with UFW: https://youtu.be/XtRXm4FFK7Q
 * Debian - Uncomplicated Firewall (ufw): https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29
 * https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
+* UFW | Uncomplicated Firewall: https://youtu.be/fcxirBuDnXY
 
 # Finance
  ## [Interactive Brokers](https://www.interactivebrokers.com/en/trading/ibkr-desktop-download.php)
@@ -324,3 +557,51 @@ sudo apt-get install gufw
 ```bash
  ./ntws-latest-standalone-linux-x64.sh
 ```
+
+# Learning
+## Anki
+https://docs.ankiweb.net/platform/linux/installing.html
+
+### References
+* 5 Ways to Use Anki for MATH-Related Classes (Physics, Economics, Calculus, etc.): https://youtu.be/xHoe9rvX7Ao
+
+# Email
+* https://proton.me/support/set-up-proton-mail-linux
+
+# Plugins
+## Flatpak
+* Install in debian: https://flathub.org/en/setup/Debian
+### 1. Install Flatpak
+A flatpak package is available in Debian 10 (Buster) and newer. To install it, run the following as root:
+```bash
+sudo apt install flatpak
+```
+### 2. Install the Software Flatpak plugin
+If you are running GNOME, it is also a good idea to install the Flatpak plugin for GNOME Software. To do this, run:
+```bash
+sudo apt install gnome-software-plugin-flatpak
+```
+If you are running KDE, you should instead install the Plasma Discover Flatpak backend:
+```bash
+sudo apt install plasma-discover-backend-flatpak
+```
+### 3. Add the Flathub repository
+Flathub is the best place to get Flatpak apps. To enable it, download and install the Flathub repository file or run the following in a terminal:
+```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+### 4. Restart
+To complete setup, restart your system. Now all you have to do is install apps!
+
+## Warehouse
+* https://flathub.org/en/apps/io.github.flattool.Warehouse
+```bash
+flatpak install flathub io.github.flattool.Warehouse
+```
+Run
+```bash
+flatpak run io.github.flattool.Warehouse
+```
+# Windows Applications
+## Winboat
+https://winboat.app/
