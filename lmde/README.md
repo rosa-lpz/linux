@@ -4,5 +4,7 @@
 
 
 
- 
+ # Install a Package
 
+ 
+sudo apt install ./vs-code.deb
