@@ -117,9 +117,16 @@ sudo chown -R :sharedgroup /srv/shared
 Give read/write/execute to the group:
 
 ```bash
-sudo chmod 770 /srv/shared
+sudo chmod 770 "/path/to/directory"
+```
+Give permissions recursively
+```bash
+sudo chmod -R 770 "/path/to/directory"
 ```
 
+**Reference**
+* https://superuser.com/questions/1325221/linux-how-to-recursively-chmod-a-folder
+* 
 #### **Optional: make new files inherit the group**
 
 ```bash
