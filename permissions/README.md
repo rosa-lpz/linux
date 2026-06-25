@@ -132,6 +132,11 @@ sudo chmod -R 770 "/path/to/directory"
 ```bash
 sudo chmod g+s /srv/shared
 ```
+Recursively
+```bash
+sudo chmod -R g+s /srv/shared
+```
+
 
 That ensures all new files and subdirectories created inside `/srv/shared` belong to the same group (`sharedgroup`).
 
