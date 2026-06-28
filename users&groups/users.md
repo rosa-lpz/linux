@@ -1,9 +1,20 @@
 # Users
 
-* https://www.geeksforgeeks.org/linux-unix/users-in-linux-system-administration/
 
+# List of users
+Listing of all user accounts in the system
 
-# Change password
+```bash
+cat /etc/passwd
+```
+
+## Root
+root is the name of the most powerful account on a Debian system. Root is sometimes referred to as the system's administrator or supervisor account.
+
+### References
+* https://wiki.debian.org/Root
+
+## Change password
 
 ```bash
 su
@@ -17,11 +28,9 @@ Enter new UNIX password:
 Retype new UNIX password:
 ```
 
-## 
 
-
-# Sudo
-## Installing sudo
+## Sudo
+### Installing sudo
 
 Unlike other distributions such as Ubuntu, Debian does not require sudo to be installed at all.
 
@@ -41,7 +50,7 @@ Password:
 
 Then log out and log back in again.
 
-## Configuring sudo
+### Configuring sudo
 
 The main sudo configuration file is /etc/sudoers. This file is read-only, even for root: there is a visudo command which allows root to edit the file but it is better to put local configuration in a new file in /etc/sudoers.d. Using /etc/sudoers.d/ will ensure local changes remain in effect, even if the Debian package maintainer changes /etc/sudoers in a new version of the [sudo](https://tracker.debian.org/sudo "DebianPts") package.
 
@@ -95,3 +104,6 @@ sudo usermod -aG sudo <user_name>
 ### File
 Open text editor
 https://www.geeksforgeeks.org/linux-unix/how-to-open-a-texteditor-in-an-ubuntu-terminal/
+
+# References
+* https://www.geeksforgeeks.org/linux-unix/users-in-linux-system-administration/
