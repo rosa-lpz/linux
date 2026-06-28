@@ -1,4 +1,5 @@
 # Text & Diagrams
+
 ## [Typora](https://typora.io/)
 * Releases: https://typora.io/releases/all
 ```bash

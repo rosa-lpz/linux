@@ -27,9 +27,9 @@
   * [Anaconda](programming/anaconda.md#anaconda)
   * [Java](programming/java.md#java)
 
-## [Security](security/README.md)
-  * [Clamav](#clamav)
-  * [Uncomplicated Firewall (ufw)](#uncomplicated-firewall-ufw)
+## [Security](security/README.md#security)
+  * [Clamav](security/README.md#clamav)
+  * [Uncomplicated Firewall (ufw)](security/README.md#uncomplicated-firewall-ufw)
 
 ## [Finance](#finance)
    * [Interactive Brokers](#interactive-brokers)
