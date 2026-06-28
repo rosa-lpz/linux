@@ -1,13 +1,24 @@
 # Permissions
 
 ## Content
-
+* [List of folders and permissions](#list-of-folders-and-permissions)
+* [Change the file / directory ownership](#change-the-file--directory-ownership)
+* [Change permissions](#change-permissions)
+* [Shared access via group permissions](#shared-access-via-group-permissions)
 
 ## Other content
+### [Users & Groups](/users&groups/README.md)
+#### Users
+* [List of users](/users&groups/users.md#list-of-users)
+* [root](/users&groups/users.md#root)
+* [Change password](/users&groups/users.md#change-password)
 
-* [Users](users&groups/users.md)
-* [Groups](users&groups/groups.md)
-
+#### Groups
+* [List groups](/users&groups/groups.md#list-groups)
+* [Add/Create a group](/users&groups/groups.md#addcreate-a-group)
+* [Delete a group](/users&groups/groups.md#delete-a-group)
+* [Assign an user to a group](/users&groups/groups.md#assign-an-user-to-a-group)
+* [Assign group ownership of a directory](/users&groups/groups.md#assign-group-ownership-of-a-directory)
 
 # Permissions
 
