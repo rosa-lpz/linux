@@ -5,6 +5,8 @@
 * [Change the file / directory ownership](#change-the-file--directory-ownership)
 * [Change permissions](#change-permissions)
 * [Shared access via group permissions](#shared-access-via-group-permissions)
+* [Fine-Grained Control (ACLs)](#fine-grained-control-acls)
+* [Permissions for a external drive](#permissions-for-a-external-drive)
 
 ## Other content
 ### [Users & Groups](/users&groups/README.md)
@@ -31,6 +33,7 @@ Every file in Linux has permissions defined for:
 
 **chown** - changes ownership of a file. Can be used recursively. Usage may be restricted to root, or even disabled, for security reasons. usage: **chown** userid files or: **chown** -R userid files
  Use chown -R user:group directory/ for recursive ownership changes.chmod +rwx filename – Adds read, write, and execute permissions.
+
 
 ## List of folders and permissions
 
@@ -249,18 +252,17 @@ Output
 drwxrwxrwx 23 user users <date>
 ```
 
-
-### Give access to all users to a drive
+### Access to all users to a drive
 
 ```bash
 sudo chmod 777 '/media/drive'
 ```
-### Group permissions
+### Group permissions to a drive
 
 ```bash
 sudo chown -R :sharedgroup '/media/drive' && sudo chmod -R 770 '/media/drive' && sudo chmod g+s -R '/media/drive'
 ```
-### see the new permissions
+### See the new permissions
 
 ```bash
 stat '/media/drive'
