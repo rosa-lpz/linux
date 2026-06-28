@@ -12,6 +12,7 @@
   * [PDF4QT](#pdf4qt)
   * [Scribus](#scribus)
 * [Programming](#programming)
+  * [Python](#python)
   * [GitHub Desktop](#github-desktop)
   * [PostgreSQL](#postgresql)
   * [PostgreSQL pgAdmin](#postgresql-pgadmin)
@@ -129,7 +130,19 @@ flatpak run re.sonny.Eloquent
 
   
 # Programming
+## Python
 
+### Python
+````bash
+sudo apt install python3
+````
+### Python Package Manager (pip)
+````bash
+sudo apt install python3-pip
+````
+### Reference
+* https://docs.python-guide.org/starting/install3/linux/
+* https://www.geeksforgeeks.org/python/how-to-install-python-on-linux/
 ## GitHub Desktop
 
 * Repository: https://github.com/shiftkey/desktop
