@@ -16,6 +16,7 @@ wget https://repo.anaconda.com/archive/Anaconda3-2025.12-2-Linux-x86_64.sh
 ```bash
 shasum -a 256 ~/<INSTALLER-FILENAME>
 shasum -a 256 Anaconda3-2024.10-1-Linux-x86_64.sh
+shasum Anaconda3-2024.10-1-Linux-x86_64.sh
 
 ```
 	* Compare it with https://repo.anaconda.com/archive/
@@ -23,6 +24,7 @@ shasum -a 256 Anaconda3-2024.10-1-Linux-x86_64.sh
 ### Normal Installation
 ```bash
 bash ~/Anaconda3-2025.12-2-Linux-x86_64.sh
+bash Anaconda3-2025.12-2-Linux-x86_64.sh
 ```
 
 ```bash
@@ -48,32 +50,32 @@ conda list
 ## Anaconda commands
 
 ```bash
---Create--
+# Create--
 conda create -name ENV_NAME python=python_version
 conda create -n ENV_NAME python=python_version
 
---ActivateEnvironments--
+# ActivateEnvironments--
 conda activate
 
---See-list-libraries
+# See-list-libraries
 conda list
 
---Activate-Specific-Environment--
+# Activate-Specific-Environment--
 conda activate <env_name>
 
----List-all-the-environments--
+# List-all-the-environments--
 conda env list
 
---Deactivate-environment--
+# Deactivate-environment--
 conda deactivate
 
----Update---
+# Update---
 conda update -n base -c defaults conda
 
---Delete-environment--
+# Delete-environment--
 conda remove --name ENV_NAME --all
 
---Delete-environment with libraries--
+# Delete-environment with libraries--
 conda remove --n ENV_NAME --all
 ```
 

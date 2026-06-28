@@ -158,7 +158,7 @@ sudo chown -R :sharedgroup /srv/shared
 
 
 
-#### Set permissions for the group
+### Set permissions for the group
 
 Give read/write/execute to the group:
 
@@ -169,7 +169,7 @@ sudo chmod -R 770 "/path/to/directory" # Give permissions recursively
 
 
 
-#### Optional: make new files inherit the group
+### Optional: make new files inherit the group
 
 ```bash
 sudo chmod g+s /srv/shared
@@ -177,6 +177,11 @@ sudo chmod g+s -R /srv/shared # recursevely
 ```
 
 That ensures all new files and subdirectories created inside `/srv/shared` belong to the same group (`sharedgroup`).
+
+### All
+```bash
+sudo chown -R :sharedgroup "shared_directory" && sudo chmod -R 770 "shared_directory" && sudo chmod g+s -R "shared_directory"
+```
 
 ------
 
@@ -250,7 +255,11 @@ drwxrwxrwx 23 user users <date>
 ```bash
 sudo chmod 777 '/media/drive'
 ```
+### Group permissions
 
+```bash
+sudo chown -R :sharedgroup '/media/drive' && sudo chmod -R 770 '/media/drive' && sudo chmod g+s -R '/media/drive'
+```
 ### see the new permissions
 
 ```bash
