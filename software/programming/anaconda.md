@@ -77,8 +77,13 @@ conda remove --name ENV_NAME --all
 
 # Delete-environment with libraries--
 conda remove --n ENV_NAME --all
+
+# Install packages
+conda install <package>
 ```
 
+**References**
+* https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/installing-with-conda.html
 
 ## Environments
 ### Create environments
@@ -107,7 +112,6 @@ Here's a summary of the steps involved in deleting an environment in Conda:
 
 **References**
 * https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/
-
 
 ### Examples
 ```bash
