@@ -22,6 +22,7 @@
 # References
 
 * https://www.debian.org/doc/manuals/debian-reference/
+* https://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_debian_package_management_prerequisites
 
 
 
