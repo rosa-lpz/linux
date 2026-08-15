@@ -49,5 +49,8 @@ flatpak run re.sonny.Eloquent
 * https://github.com/JakubMelka/PDF4QT
 
 ## Latex
+
+### References
 * Install Latex and Create Latex Documents on Linux Ubuntu - Install MikTex and TeXstudio Linux Ubuntu: https://youtu.be/gc_ANrGkTuw?si=p7zMOD8mdmdkW9qT
+  * In this LaTeX tutorial, we explain how to correctly install and use LaTeX in Ubuntu Linux. LaTeX is a very popular language for writing scientific reports and papers containing graphs, figures, and equations. It is widely used in the scientific community.  We explain how to install MikTex and TeXstudio in Linux Ubuntu and how to compile Latex and Tex documents by using TeXstudio in Linux Ubuntu. Although we are using Linux Ubuntu 24.04 everything explained in this tutorial applies to any other Linux Ubuntu version.
   
