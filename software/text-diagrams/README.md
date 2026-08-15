@@ -48,4 +48,6 @@ flatpak run re.sonny.Eloquent
 ## PDF4QT
 * https://github.com/JakubMelka/PDF4QT
 
+## Latex
+* Install Latex and Create Latex Documents on Linux Ubuntu - Install MikTex and TeXstudio Linux Ubuntu: https://youtu.be/gc_ANrGkTuw?si=p7zMOD8mdmdkW9qT
   
