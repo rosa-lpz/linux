@@ -16,7 +16,8 @@ And uninstall the package with:
 sudo apt remove clamav
 ```
 
-**Signature Testing and Management**
+#### **Updating Signature Databases FreshClam**
+
 * https://docs.clamav.net/manual/Usage/SignatureManagement.html
 
 Before you can start the ClamAV scanning engine (using either clamd or clamscan), you must first have ClamAV Virus Database (.cvd) file(s) installed in the appropriate location on your system.
