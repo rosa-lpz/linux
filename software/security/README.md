@@ -34,6 +34,10 @@ sudo freshclam
 **Debian**
 * Install ClamTk using "Discover" in Debian.
 
+## Karspersky
+### Free virus removal tool (Linux)
+* https://latam.kaspersky.com/downloads/free-virus-removal-tool
+
 ## Uncomplicated Firewall (ufw)
 
 ### Install
