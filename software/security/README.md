@@ -38,6 +38,15 @@ sudo freshclam
 ### Free virus removal tool (Linux)
 * https://latam.kaspersky.com/downloads/free-virus-removal-tool
 
+Download kvrt.run file
+Open "Download" folder in terminal and give permissions to kvrt.run file:
+```bash
+chmod +x kvrt.run
+```
+Execute kvrt.run
+```bash
+./kvrt.run
+```
 ## Uncomplicated Firewall (ufw)
 
 ### Install
