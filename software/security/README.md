@@ -5,7 +5,7 @@
 
 **DEB packages (for Debian, Ubuntu, etc.)**
 ```bash
-sudo apt install ~/Downloads/clamav-1.4.0.libnux.x86_64.deb
+sudo apt install ~/Downloads/clamav-1.4.0.linux.x86_64.deb
 ```
 You can verify that the package was installed using:
 ```bash
