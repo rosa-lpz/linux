@@ -8,10 +8,10 @@ Repository for linux knowledge base
 ## [Permissions](permissions/README.md)
 ## [Software](software/README.md)
 * [Programming](software/programming/README.md)
-## Distros
-### [Linux Mint Debian Edition](lmde/README.md)
-* [Keyboard shortcuts](lmde/keyboard-shorcuts/README.md)
-* [Errors](lmde/errors/README.md)
+## Distributions
+* Ubuntu
+* Debian
+* Linux Mint Debian Edition
 
 
 
