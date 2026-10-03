@@ -25,12 +25,25 @@
 # Permissions
 
 In Debian (and other Linux systems), you can give a user permission to access a directory in several ways — depending on what kind of access you want (read, write, execute, etc.). Here’s a step-by-step guide for the main methods.
+## Permission Categories
 Every file in Linux has permissions defined for:
 
-- **Owner** (user who created the file)
-- **Group** (users in the same group)
-- **Others** (everyone else)
+- **Owner**: The user who created the file or directory.
+- **Group**: A set of users who share the same group as the file or directory.
+- **Others**: All users who are neither the owner nor part of the group.
 
+## Numerical Representation
+Each permission type is assigned a numerical value:
+
+* Read (r) = 4
+* Write (w) = 2
+* Execute (x) = 1
+
+To calculate the numerical value for a category, you add up the values of the permissions that are enabled. For example, if a user has read and write permissions, the numerical value is 4 + 2 = 6.
+
+The overall numerical permission for a file or directory is a three-digit number, where each digit represents the permissions for the owner, group, and others respectively. For example, 755 means the owner has read, write, and execute permissions (4 + 2 + 1 = 7), the group has read and execute permissions (4 + 1 = 5), and others have read and execute permissions (4 + 1 = 5).
+
+## Ownership
 **chown** - changes ownership of a file. Can be used recursively. Usage may be restricted to root, or even disabled, for security reasons. usage: **chown** userid files or: **chown** -R userid files
  Use chown -R user:group directory/ for recursive ownership changes.chmod +rwx filename – Adds read, write, and execute permissions.
 
@@ -276,5 +289,5 @@ stat '/media/drive'
 * https://wiki.debian.org/Permissions
 * Learn Linux TV
   * Linux Crash Course - Understanding File & Directory Permissions: https://youtu.be/4e669hSjaX8
-
 * https://www.redhat.com/en/blog/manage-permissions
+* https://linuxvox.com/blog/linux-permissions-to-numbers/
