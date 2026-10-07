@@ -20,5 +20,6 @@ Repository for linux knowledge base
 # References
 
 * https://linuxize.com/cheatsheet/
+* https://www.geeksforgeeks.org/linux-unix/linux-commands-cheat-sheet/
 
  
