@@ -10,7 +10,7 @@ Package management commands are used to install, update, upgrade, and remove sof
 
 ## Install Software
 
-### From Command line
+**Command line**
 
 ```cmd
 sudo apt install snap
@@ -18,7 +18,7 @@ sudo apt install snap
 
 
 
-### See the installed Software
+**See the installed Software**
 
 ```cmd
 dpkg --list
@@ -32,7 +32,7 @@ apt list --installed
 
 
 
-## APP images
+### APP images
 
 https://www.howtogeek.com/827849/how-to-use-appimages-on-linux/
 Example 1
@@ -50,7 +50,7 @@ $ ./Subsurface*.AppImage
 
 
 
-## RPM Packages
+### RPM Packages
 
 ```bash
 sudo rpm -i "path_to_RPM_Package"
@@ -59,7 +59,7 @@ sudo rpm -i anytype-0.45.0.x86_64.rpm
 
 
 
-## DEB Packages
+### DEB Packages
 
 #### dpkg
 
@@ -80,7 +80,7 @@ https://www.fosslinux.com/41461/how-to-install-deb-packages-on-ubuntu-linux-mint
 
 
 
-## Homebrew
+### Homebrew
 
 **The Missing Package Manager for macOS (or Linux)**
 
@@ -124,3 +124,36 @@ echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
 
 
 
+## Update & Upgrade Software
+
+```cmd
+sudo apt update && sudo apt upgrade
+```
+
+
+
+## Uninstall Software
+
+### Command Line
+
+**Remove**
+
+```bash
+sudo apt remove docker-desktop
+```
+
+
+**Purge**
+
+```bash
+sudo apt purge gimp
+sudo apt-get purge azuredatastudio
+```
+
+**dpkg**
+
+```bash
+sudo dpkg -r gifski
+```
+
+# 
