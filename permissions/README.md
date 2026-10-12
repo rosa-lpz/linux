@@ -1,4 +1,4 @@
-# Permissions
+# Permissions in Linux
 
 ## Content
 * [List of folders and permissions](#list-of-folders-and-permissions)
